@@ -34,14 +34,16 @@ public class BurgerTest {
     @Test
     public void addIngredientTest() {
         burger.addIngredient(sauceIngredient);
-        Assert.assertEquals(1, burger.ingredients.size());
+        int expectedSize = 1;
+        Assert.assertEquals(expectedSize, burger.ingredients.size());
     }
 
     @Test
     public void removeIngredientTest() {
         burger.addIngredient(sauceIngredient);
         burger.removeIngredient(0);
-        Assert.assertTrue(burger.ingredients.isEmpty());
+        int expectedSize = 0;
+        Assert.assertEquals(expectedSize, burger.ingredients.size());
     }
 
     @Test
